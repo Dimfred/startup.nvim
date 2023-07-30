@@ -470,24 +470,24 @@ end
 
 ---reposition cursor after it moved
 function U.reposition_cursor()
-    if vim.o.filetype ~= "startup" or flag then
-        return
-    end
-    new_cursor_pos = vim.api.nvim_win_get_cursor(0)
-    if new_cursor_pos[1] > U.cursor_pos[1] then
-        move_down()
-    elseif
-        (new_cursor_pos[1] < U.cursor_pos[1])
-        or new_cursor_pos[2] < U.cursor_pos[2]
-    then
-        move_up()
-    elseif
-        (new_cursor_pos[1] > U.cursor_pos[1])
-        or new_cursor_pos[2] > U.cursor_pos[2]
-    then
-        move_down()
-    end
-    U.cursor_pos = vim.api.nvim_win_get_cursor(0)
+    -- if vim.o.filetype ~= "startup" or flag then
+    --     return
+    -- end
+    -- new_cursor_pos = vim.api.nvim_win_get_cursor(0)
+    -- if new_cursor_pos[1] > U.cursor_pos[1] then
+    --     move_down()
+    -- elseif
+    --     (new_cursor_pos[1] < U.cursor_pos[1])
+    --     or new_cursor_pos[2] < U.cursor_pos[2]
+    -- then
+    --     move_up()
+    -- elseif
+    --     (new_cursor_pos[1] > U.cursor_pos[1])
+    --     or new_cursor_pos[2] > U.cursor_pos[2]
+    -- then
+    --     move_down()
+    -- end
+    -- U.cursor_pos = vim.api.nvim_win_get_cursor(0)
 end
 
 ---return longest line length
